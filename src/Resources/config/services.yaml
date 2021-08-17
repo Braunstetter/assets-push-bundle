@@ -1,0 +1,3 @@
+services:
+  Braunstetter\AssetsPushBundle\Twig\Extension:
+    tags: ['twig.extension']

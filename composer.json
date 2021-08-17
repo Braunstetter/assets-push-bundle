@@ -1,0 +1,31 @@
+{
+    "name": "braunstetter/assets-push-bundle",
+    "description": "A clean and easy way to extend your assets (css, js) from any point inside of your twig templates.",
+    "type": "symfony-bundle",
+    "require": {
+        "php": "^8",
+        "twig/twig": "^3.3"
+    },
+    "require-dev": {
+        "symfony/framework-bundle": "^4.4|^5.0",
+        "phpunit/phpunit": "^9.5",
+        "symfony/test-pack": "^1.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Slowwie",
+            "email": "michaelbrauner82@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Braunstetter\\AssetsPushBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Braunstetter\\AssetsPushBundle\\Test\\": "tests/"
+        }
+    }
+}
