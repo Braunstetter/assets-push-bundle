@@ -1,63 +1,51 @@
 <?php
 
-namespace Braunstetter\AssetsPushBundle\Twig {
+namespace Braunstetter\AssetsPushBundle\Twig;
 
 
-    use Braunstetter\AssetsPushBundle\Twig\NodeVisitors\AssetsNodeVisitor;
-    use Braunstetter\AssetsPushBundle\Twig\NodeVisitors\AssetsSetNodeVisitor;
-    use Braunstetter\AssetsPushBundle\Twig\TokenParser\CssTokenParser;
-    use Twig\Extension\AbstractExtension;
-    use Twig\TwigFunction;
+use Braunstetter\AssetsPushBundle\Twig\TokenParser\CssTokenParser;
+use Braunstetter\AssetsPushBundle\Twig\TokenParser\JsTokenParser;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
-    class Extension extends AbstractExtension
+class Extension extends AbstractExtension
+{
+
+    private array $registeredFiles = ['css' => [], 'js' => []];
+
+    public function registerCss(string $fileUrl): void
     {
-        /**
-         * @var int
-         */
-        private $stackLevel = 0;
-
-        public function enter(): void
-        {
-            ++$this->stackLevel;
-            dump($this->stackLevel);
+        if (!in_array($fileUrl, $this->registeredFiles['css'])) {
+            $this->registeredFiles['css'][] = $fileUrl;
         }
-
-        public function getTokenParsers(): array
-        {
-            return [
-                new CssTokenParser(),
-            ];
-        }
-
-        public function getNodeVisitors(): array
-        {
-            return [
-                new AssetsNodeVisitor()
-            ];
-        }
-
-        public function getFunctions(): array
-        {
-            return [
-              new TwigFunction('assets', [$this, 'getAssets'])
-            ];
-        }
-
-        public function getAssets(): int
-        {
-            return $this->stackLevel;
-        }
-
-
     }
+
+    public function registerJs(string $fileUrl): void
+    {
+        if (!in_array($fileUrl, $this->registeredFiles['js'])) {
+            $this->registeredFiles['js'][] = $fileUrl;
+        }
+    }
+
+    public function getTokenParsers(): array
+    {
+        return [
+            new CssTokenParser(),
+            new JsTokenParser(),
+        ];
+    }
+
+    public function getFunctions(): array
+    {
+        return [
+            new TwigFunction('assets', [$this, 'getAssets'])
+        ];
+    }
+
+    public function getAssets(): array
+    {
+        return $this->registeredFiles;
+    }
+
 }
 
-namespace {
-
-    use Twig\Environment;
-
-    function push_asset($env) {
-         var_dump($env);
-     }
-
-}

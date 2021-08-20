@@ -1,3 +1,6 @@
 services:
   Braunstetter\AssetsPushBundle\Twig\Extension:
     tags: ['twig.extension']
+
+  Twig\DeferredExtension\DeferredExtension:
+    tags: [ 'twig.extension' ]

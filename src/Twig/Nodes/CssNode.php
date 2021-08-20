@@ -20,10 +20,9 @@ class CssNode extends Node
     public function compile(Compiler $compiler)
     {
 
-//        $compiler
-//            ->write(sprintf('$extension = $this->extensions["%s"];', 'Braunstetter\\AssetsPushBundle\\Twig\\Extension'))
-//            ->write('$extension->enter();')
-//        ;
+        $compiler
+            ->write(sprintf('$extension = $this->extensions["%s"];', 'Braunstetter\\AssetsPushBundle\\Twig\\Extension'))
+            ->write('$extension->registerCss("' . $this->getAttribute('data') . '");');
 
 //        $compiler
 //            ->write('if (!isset(' . static::BASE_ARRAY_PATH . ')) { ' . static::BASE_ARRAY_PATH . ' = []; }')
@@ -40,8 +39,6 @@ class CssNode extends Node
 //            ->raw(");\n");
 
     }
-
-
 
 
 }

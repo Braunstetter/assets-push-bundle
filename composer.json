@@ -4,7 +4,8 @@
     "type": "symfony-bundle",
     "require": {
         "php": "^8",
-        "twig/twig": "^3.3"
+        "twig/twig": "^3.3",
+        "rybakit/twig-deferred-extension": "^3.0"
     },
     "require-dev": {
         "symfony/framework-bundle": "^4.4|^5.0",
