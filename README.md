@@ -4,6 +4,8 @@ Push your assets from everywhere inside your templates into the `<head>`.
 
 ## Installation
 
+`composer require braunstetter/assets-push-bundle`
+
 ## Usage
 
 After the installation you can use the two tags from each template to register additional resources.
