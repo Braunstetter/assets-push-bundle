@@ -10,7 +10,9 @@
     "require-dev": {
         "symfony/framework-bundle": "^4.4|^5.0",
         "phpunit/phpunit": "^9.5",
-        "symfony/test-pack": "^1.0"
+        "symfony/test-pack": "^1.0",
+        "symfony/twig-bundle": "^5.3",
+        "symfony/yaml": "^5.3"
     },
     "license": "MIT",
     "authors": [

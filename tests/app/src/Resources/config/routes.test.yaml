@@ -1,0 +1,4 @@
+test:
+  path: /test
+  controller: Braunstetter\AssetsPushBundle\Test\app\src\Controller\TestController::index
+

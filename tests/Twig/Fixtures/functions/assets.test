@@ -1,0 +1,15 @@
+--TEST--
+"assets" function outputs correctly
+
+--TEMPLATE--
+{% css '/breadcrumbs.css' %}
+{% js '/breadcrumbs.js' %}
+{{ assets()['css']|join(',') }}
+{{ assets()['js']|join(',') }}
+
+--DATA--
+return []
+
+--EXPECT--
+/breadcrumbs.css
+/breadcrumbs.js

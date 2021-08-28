@@ -1,0 +1,8 @@
+services:
+  Braunstetter\AssetsPushBundle\Twig\Extension:
+    tags: ['twig.extension']
+    public: true
+
+  Twig\DeferredExtension\DeferredExtension:
+    tags: [ 'twig.extension' ]
+    public: true

@@ -1,0 +1,12 @@
+--TEST--
+"css" tag registers css correctly
+
+--TEMPLATE--
+{% css '/breadcrumbs.css' %}
+{{ assets()['css']|join(',') }}
+
+--DATA--
+return []
+
+--EXPECT--
+/breadcrumbs.css

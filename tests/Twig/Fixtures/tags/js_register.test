@@ -1,0 +1,12 @@
+--TEST--
+"js" tag registers js correctly
+
+--TEMPLATE--
+{% js '/breadcrumbs.js' %}
+{{ assets()['js']|join(',') }}
+
+--DATA--
+return []
+
+--EXPECT--
+/breadcrumbs.js

@@ -1,0 +1,20 @@
+--TEST--
+"css" tag registers css correctly
+
+--TEMPLATE--
+
+{% block pushedCSS deferred %}
+{% for asset in assets()['css'] %}
+{{ asset }}
+{% endfor %}
+{% endblock %}
+
+{% css '/breadcrumbs.css' %}
+{% css '/custom.css' %}
+
+--DATA--
+return []
+
+--EXPECT--
+/breadcrumbs.css
+/custom.css
