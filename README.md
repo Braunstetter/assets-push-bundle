@@ -1,5 +1,7 @@
 # AssetsPushBundle
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/braunstetter/assets-push-bundle/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/braunstetter/assets-push-bundle/?branch=main)
+
 Push your assets from everywhere inside your templates into the `<head>`.
 
 ## Installation
