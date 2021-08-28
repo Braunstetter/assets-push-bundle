@@ -3,7 +3,7 @@
     "description": "A clean and easy way to extend your assets (css, js) from any point inside of your twig templates.",
     "type": "symfony-bundle",
     "require": {
-        "php": "^8",
+        "php": "^7.3|^8",
         "twig/twig": "^3.3",
         "rybakit/twig-deferred-extension": "^3.0"
     },
