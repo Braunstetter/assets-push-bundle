@@ -8,7 +8,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class AssetsPushBundle extends Bundle
 {
-    public function getContainerExtension()
+    public function getContainerExtension(): AssetsPushBundleExtension|bool|ExtensionInterface|null
     {
         if (null === $this->extension) {
             $this->extension = new AssetsPushBundleExtension();

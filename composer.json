@@ -11,7 +11,9 @@
         "symfony/framework-bundle": "^4.4|^5.0",
         "symfony/test-pack": "^1.0",
         "symfony/twig-bundle": "^5.3",
-        "symfony/yaml": "^5.3"
+        "symfony/yaml": "^5.3",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.2",
+        "nyholm/symfony-bundle-test": "^1.8"
     },
     "license": "MIT",
     "authors": [

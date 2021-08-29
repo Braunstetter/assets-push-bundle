@@ -9,9 +9,6 @@ use Twig\Compiler;
 class CssNode extends Node
 {
 
-    const BASE_ARRAY_PATH = '$context["' . Names::ARRAY_BASE . '"]';
-    const FULL_ARRAY_PATH = '$context["' . Names::ARRAY_BASE . '"]["' . Names::CSS . '"]';
-
     public function __construct(string $data, int $lineno = 0, string $tag = null)
     {
         parent::__construct([], ['data' => $data], $lineno, $tag);
