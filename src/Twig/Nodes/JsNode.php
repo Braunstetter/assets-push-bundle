@@ -2,7 +2,6 @@
 
 namespace Braunstetter\AssetsPushBundle\Twig\Nodes;
 
-use Braunstetter\AssetsPushBundle\Names;
 use Twig\Node\Node;
 use Twig\Compiler;
 
