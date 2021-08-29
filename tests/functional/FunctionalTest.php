@@ -2,24 +2,24 @@
 
 namespace Braunstetter\AssetsPushBundle\Test\functional;
 
-
-use PHPUnit\Framework\TestCase;
 use Braunstetter\AssetsPushBundle\Test\app\src\TestKernel;
+use PHPUnit\Framework\TestCase;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 
 class FunctionalTest extends TestCase
 {
     protected TestKernel $kernel;
 
-    public function __construct(?string $name = null, array $data = [], $dataName = '')
+    protected function setUp() : void
     {
-        parent::__construct($name, $data, $dataName);
+        parent::setUp();
 
         $kernel = new TestKernel('dev', true);
         $kernel->boot();
 
         $this->kernel = $kernel;
     }
+
 
     public function testServiceWiring()
     {
