@@ -1,6 +1,7 @@
 # AssetsPushBundle
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/braunstetter/assets-push-bundle/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/braunstetter/assets-push-bundle/?branch=main)
+[![Build Status](https://app.travis-ci.com/Braunstetter/assets-push-bundle.svg?branch=main)](https://app.travis-ci.com/Braunstetter/assets-push-bundle)
 
 Push your assets from everywhere inside your templates into the `<head>`.
 
