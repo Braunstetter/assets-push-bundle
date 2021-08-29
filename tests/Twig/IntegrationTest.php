@@ -10,7 +10,7 @@ use Twig\Test\IntegrationTestCase;
 class IntegrationTest extends IntegrationTestCase
 {
 
-    #[Pure] public function getExtensions() : array
+    public function getExtensions() : array
     {
         return [
             new DeferredExtension(),
