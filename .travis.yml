@@ -31,7 +31,4 @@ install:
 
 script:
   - composer validate --strict --no-check-lock
-  - ./vendor/bin/simple-phpunit $PHPUNIT_FLAGS --coverage-clover coverage.xml
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - ./vendor/bin/simple-phpunit $PHPUNIT_FLAGS
