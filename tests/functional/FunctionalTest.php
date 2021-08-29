@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 
 class FunctionalTest extends TestCase
 {
-    protected TestKernel $kernel;
+    protected $kernel;
 
     protected function setUp() : void
     {
