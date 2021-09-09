@@ -7,6 +7,11 @@
 
 Push your assets from everywhere inside your templates into the `<head>`.
 
+When you are building an extensible software system where contributors can extend parts of the frontend you also want to allow them to extend the javascript and/or css of the whole page. 
+
+A big thanks goes out to [rybakit/twig-deferred-extension](https://github.com/rybakit/twig-deferred-extension). 
+Because of this well written, well tested and maintained piece of software it is possible to read out the registered data in a deferred way.
+
 ## Installation
 
 `composer require braunstetter/assets-push-bundle`
