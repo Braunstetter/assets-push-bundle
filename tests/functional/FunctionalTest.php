@@ -29,8 +29,6 @@ class FunctionalTest extends TestCase
 
         $this->assertInstanceOf('Braunstetter\AssetsPushBundle\Twig\Extension', $extension);
         $this->assertInstanceOf('Twig\DeferredExtension\DeferredExtension', $deferredExtension);
-
-        $this->assertTrue(true, 'is not true');
     }
 
     public function testControllerOutput()
