@@ -40,13 +40,13 @@ class FunctionalTest extends TestCase
 
         $this->assertSame(200, $client->getResponse()->getStatusCode());
 
-        $this->assertGreaterThan(
-            0,
+        $this->assertEquals(
+            1,
             $client->getCrawler()->filter('html:contains("/breadcrumbs.css")')->count()
         );
 
-        $this->assertGreaterThan(
-            0,
+        $this->assertEquals(
+            1,
             $client->getCrawler()->filter('html:contains("/custom.css")')->count()
         );
     }

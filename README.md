@@ -67,3 +67,5 @@ Now you can use this on top of your pages:
 </head>
 
 ```
+
+> Assets will be just added **once** to the stack, and therefore it will be just **included once**.  
